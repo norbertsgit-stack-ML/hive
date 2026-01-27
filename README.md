@@ -84,6 +84,26 @@ This installs:
 - **aden_tools** - 19 MCP tools for agent capabilities
 - All required dependencies
 
+### Windows Setup Notes
+
+If you are setting up Hive on Windows, you may encounter errors on a fresh clone due to missing directories or example agents.
+
+Before running agent commands, ensure the following:
+
+1. Create the `exports` directory if it does not exist:
+   ```bash
+   mkdir exports
+2. Some documentation references example agents such as `support_ticket_agent`. These may not be present by default. You may need to create your own agent module before running commands like:
+
+   ```bash
+   python -m support_ticket_agent
+3. If commands fail with Python or PYTHONPATH errors, ensure:
+
+   - You are running commands from the project root  
+   - Your virtual environment is activated  
+   - The project root is included in your PYTHONPATH  
+
+
 ### Build Your First Agent
 
 ```bash
